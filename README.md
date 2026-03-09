@@ -91,7 +91,7 @@ Las claves simétricas en AWS KMS son ideales para cifrado en reposo porque:
 
 ### Evidencia
 
-![Clave KMS MyKMSKey creada y habilitada](tarea1-clave-creada.png)
+![Clave KMS MyKMSKey creada y habilitada](imagenes/tarea1-clave-creada.png)
 
 
 > **Nota:** La clave quedó correctamente creada con estado "Habilitada", lista para ser utilizada en las siguientes tareas.
@@ -163,6 +163,7 @@ El archivo se almacenó utilizando **SSE-KMS (Server-Side Encryption with KMS)**
 
 > 2. Se utilizó **SSE-KMS** con nuestra clave específica, no el cifrado por defecto de S3
 
+
 ## 🌐 TAREA 3: INTENTO DE ACCESO PÚBLICO AL OBJETO CIFRADO
 
 
@@ -193,7 +194,7 @@ Demostrar que un objeto cifrado con SSE-KMS no es accesible públicamente, inclu
 
 #### 3.2 Modificación de permisos del bucket
 
-1. En la pestaña **Permisos** del bucket, editamos \*\*Bloquear acceso público\*\*
+1. En la pestaña **Permisos** del bucket, editamos **Bloquear acceso público**
 
 2. Desmarcamos **"Bloquear todo el acceso público"**
 
@@ -201,7 +202,7 @@ Demostrar que un objeto cifrado con SSE-KMS no es accesible públicamente, inclu
 
 
 
-![Bloqueo de acceso público desactivado](imagenes/tarea3-error-access-denied.png)
+![Bloqueo de acceso público desactivado](imagenes/tarea3-bloqueo-desactivado.png)
 
 
 
@@ -239,7 +240,8 @@ El cifrado con KMS agrega una capa adicional de seguridad. Incluso si los permis
 
 
 
-Esto ejemplifica el principio de **defensa en profundidad\*\*: múltiples capas de seguridad protegen los datos.
+Esto ejemplifica el principio de **defensa en profundidad**: múltiples capas de seguridad protegen los datos.
+
 
 ## 🔐 TAREA 4: ACCESO FIRMADO AL OBJETO CIFRADO
 
@@ -319,6 +321,7 @@ Cuando solicitamos abrir el objeto desde la consola:
 
 El cifrado con KMS **no impide el acceso a usuarios autorizados\*\*, pero bloquea eficazmente el acceso anónimo o no autenticado, incluso si el objeto se hace público accidentalmente.
 
+
 ## 📊 TAREA 5: SUPERVISIÓN CON AWS CLOUDTRAIL
 
 
@@ -343,7 +346,7 @@ Demostrar cómo CloudTrail registra todas las operaciones relacionadas con nuest
 
 
 
-![Historial de eventos filtrado por KMS](tarea5-cloudtrail-filtro-kms.png)
+![Historial de eventos filtrado por KMS](imagenes/tarea5-cloudtrail-filtro-kms.png)
 
 
 
@@ -789,6 +792,7 @@ Este laboratorio evidencia la importancia de:
 - **Planificar la recuperación** ante deshabilitación accidental
 
 -**Aplicar defensa en profundidad** en AWS
+
 
 
 
