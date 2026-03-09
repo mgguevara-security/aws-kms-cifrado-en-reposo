@@ -231,11 +231,11 @@ Este comportamiento demuestra un principio fundamental de seguridad:
 
 **Conclusión clave:**  
 
-El cifrado con KMS agrega una capa adicional de seguridad. Incluso si los permisos de S3 se configuran incorrectamente y un objeto se vuelve público accidentalmente, el atacante **no podrá leerlo\*\* a menos que también tenga permisos para usar la clave KMS.
+El cifrado con KMS agrega una capa adicional de seguridad. Incluso si los permisos de S3 se configuran incorrectamente y un objeto se vuelve público accidentalmente, el atacante **no podrá leerlo** a menos que también tenga permisos para usar la clave KMS.
 
 
 
-Esto ejemplifica el principio de **defensa en profundidad**: múltiples capas de seguridad protegen los datos.
+Esto ejemplifica el principio de  **defensa en profundidad** : múltiples capas de seguridad protegen los datos.
 
 
 ## 🔐 TAREA 4: ACCESO FIRMADO AL OBJETO CIFRADO
@@ -787,6 +787,7 @@ Este laboratorio evidencia la importancia de:
 - **Planificar la recuperación** ante deshabilitación accidental
 
 -**Aplicar defensa en profundidad** en AWS
+
 
 
 
