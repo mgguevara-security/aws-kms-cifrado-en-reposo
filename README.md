@@ -137,7 +137,7 @@ El archivo se almacenó utilizando **SSE-KMS (Server-Side Encryption with KMS)**
 
 - La clave de datos se cifró nuevamente con `MyKMSKey` y se almacenó como metadatos del objeto
 
-- Sin acceso a `MyKMSKey`, es imposible descifrar la clave de datos y, por lo tanto, el archivo
+- Sin acceso a `MyKMSKey`, es imposible descifrar la clave de datos y, por lo tanto, al archivo.
 
 
 
@@ -792,6 +792,7 @@ Este laboratorio evidencia la importancia de:
 - **Planificar la recuperación** ante deshabilitación accidental
 
 -**Aplicar defensa en profundidad** en AWS
+
 
 
 
