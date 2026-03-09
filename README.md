@@ -354,8 +354,6 @@ Demostrar cómo CloudTrail registra todas las operaciones relacionadas con nuest
 
 
 
-![Historial de eventos filtrado por KMS](imagenes/tarea5-cloudtrail-filtro-kms.png)
-
 
 
 #### 5.2 Análisis del evento GenerateDataKey
@@ -782,6 +780,7 @@ Este laboratorio evidencia la importancia de:
 - **Planificar la recuperación** ante deshabilitación accidental
 
 -**Aplicar defensa en profundidad** en AWS
+
 
 
 
