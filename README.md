@@ -671,15 +671,11 @@ El objeto está cifrado con SSE-KMS. S3 necesita que KMS descifre la clave de da
 
 Revisamos el historial de eventos y encontramos:
 
-
-
 | Evento | Hallazgo |
-
-|--------|----------|
+| :--- | :--- |
 | **DisableKey** | Registro de cuándo deshabilitamos la clave |
 | **StartInstances** | Solicitud exitosa, pero instancia no arranca |
 | **CreateGrant** | Error por clave deshabilitada |
-
 
 
 ![Evento DisableKey en CloudTrail](imagenes/tarea7-cloudtrail-disablekey.png)
@@ -767,6 +763,7 @@ Este laboratorio evidencia la importancia de:
 - **Planificar la recuperación** ante deshabilitación accidental
 
 -**Aplicar defensa en profundidad** en AWS
+
 
 
 
