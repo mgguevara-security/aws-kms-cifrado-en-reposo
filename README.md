@@ -91,7 +91,7 @@ Las claves simétricas en AWS KMS son ideales para cifrado en reposo porque:
 
 ### Evidencia
 
-![Clave KMS MyKMSKey creada y habilitada](imagenes/tarea1-clave-creada.png)
+![Clave KMS MyKMSKey creada y habilitada](tarea1-clave-creada.png)
 
 
 > **Nota:** La clave quedó correctamente creada con estado "Habilitada", lista para ser utilizada en las siguientes tareas.
@@ -789,6 +789,7 @@ Este laboratorio evidencia la importancia de:
 - **Planificar la recuperación** ante deshabilitación accidental
 
 -**Aplicar defensa en profundidad** en AWS
+
 
 
 
