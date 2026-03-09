@@ -609,28 +609,17 @@ Una vez asociado, verificamos que:
 
 
 ```mermaid
-
 graph TD
-
-&nbsp;   A\[Instancia con volumen sin cifrar] --> B\[Detener instancia]
-
-&nbsp;   B --> C\[Crear instantánea del volumen]
-
-&nbsp;   C --> D\[Crear volumen CIFRADO desde instantánea<br/>con MyKMSKey]
-
-&nbsp;   D --> E\[Desasociar volumen antiguo]
-
-&nbsp;   E --> F\[Asociar volumen cifrado como /dev/xvda]
-
-&nbsp;   F --> G\[Instancia con volumen raíz cifrado]
-
-&nbsp;   
-
-&nbsp;   style D fill:#90EE90,stroke:#333,stroke-width:2px
-
-&nbsp;   style G fill:#90EE90,stroke:#333,stroke-width:2px
-
-
+    A[Instancia con volumen sin cifrar] --> B[Detener instancia]
+    B --> C[Crear instantánea del volumen]
+    C --> D[Crear volumen CIFRADO desde instantánea<br/>con MyKMSKey]
+    D --> E[Desasociar volumen antiguo]
+    E --> F[Asociar volumen cifrado como /dev/xvda]
+    F --> G[Instancia con volumen raíz cifrado]
+    
+    style D fill:#90EE90,stroke:#333,stroke-width:2px
+    style G fill:#90EE90,stroke:#333,stroke-width:2px
+```
 
 
 ##  TAREA 7 : DESACTIVACIÓN DE LA CLAVE Y OBSERVACIÓN DE EFECTOS
@@ -801,6 +790,7 @@ Este laboratorio evidencia la importancia de:
 - **Planificar la recuperación** ante deshabilitación accidental
 
 -**Aplicar defensa en profundidad** en AWS
+
 
 
 
