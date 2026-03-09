@@ -344,7 +344,7 @@ Demostrar cómo CloudTrail registra todas las operaciones relacionadas con nuest
 
 
 
-![Historial de eventos filtrado por KMS](imagenes/tarea5-cloudtrail-lista-eventos.png)
+![Historial de eventos filtrado por KMS](tarea5-cloudtrail-filtro-kms.png)
 
 
 
@@ -354,7 +354,7 @@ Este evento se generó cuando **subimos** `clock.png` a S3 con cifrado SSE-KMS.
 
 
 
-Seleccionamos el evento \*\*GenerateDataKey\*\* y observamos:
+Seleccionamos el evento **GenerateDataKey** y observamos:
 
 
 
@@ -633,7 +633,7 @@ graph TD
 
 
 
-## ⚠️ TAREA 7: DESACTIVACIÓN DE LA CLAVE Y OBSERVACIÓN DE EFECTOS
+##  TAREA 7 : DESACTIVACIÓN DE LA CLAVE Y OBSERVACIÓN DE EFECTOS
 
 
 
@@ -801,6 +801,7 @@ Este laboratorio evidencia la importancia de:
 - **Planificar la recuperación** ante deshabilitación accidental
 
 -**Aplicar defensa en profundidad** en AWS
+
 
 
 
