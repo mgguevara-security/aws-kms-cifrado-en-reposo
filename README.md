@@ -518,7 +518,7 @@ Cifrar el volumen raíz de una instancia EC2 existente que inicialmente no tení
 
 
 
-![Creación de volumen cifrado con KMS](tarea6-crear-volumen-zona-correcta.png)
+![Creación de volumen cifrado con KMS](imagenes/tarea6-crear-volumen-zona-correcta.png)
 
 
 
@@ -770,6 +770,7 @@ Este laboratorio evidencia la importancia de:
 - **Planificar la recuperación** ante deshabilitación accidental
 
 -**Aplicar defensa en profundidad** en AWS
+
 
 
 
