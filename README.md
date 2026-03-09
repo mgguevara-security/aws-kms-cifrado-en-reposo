@@ -92,8 +92,7 @@ Las claves simétricas en AWS KMS son ideales para cifrado en reposo porque:
 
 \### Evidencia
 
-!\[Clave KMS MyKMSKey creada y habilitada](imagenes/tarea1-clave-creada.png)
-
+![Clave KMS MyKMSKey creada y habilitada](imagenes/tarea1-clave-creada.png)
 
 
 > \*\*Nota:\*\* La clave quedó correctamente creada con estado "Habilitada", lista para ser utilizada en las siguientes tareas.
@@ -149,13 +148,13 @@ El archivo se almacenó utilizando \*\*SSE-KMS (Server-Side Encryption with KMS)
 
 \*\*Carga exitosa del archivo:\*\*
 
-!\[Carga exitosa del archivo clock.png](imagenes/tarea2-carga-exitosa.png)
+![Carga exitosa del archivo clock.png](imagenes/tarea2-carga-exitosa.png)
 
 
 
 \*\*Configuración de cifrado SSE-KMS con MyKMSKey:\*\*
 
-!\[Configuración de cifrado mostrando SSE-KMS y ARN de la clave](imagenes/tarea2-configuracion-cifrado.png)
+![Configuración de cifrado mostrando SSE-KMS y ARN de la clave](imagenes/tarea2-configuracion-cifrado.png)
 
 
 
@@ -203,7 +202,7 @@ Demostrar que un objeto cifrado con SSE-KMS no es accesible públicamente, inclu
 
 
 
-!\[Bloqueo de acceso público desactivado](imagenes/tarea3-bloqueo-desactivado.png)
+![Bloqueo de acceso público desactivado](imagenes/tarea3-error-access-denied.png)
 
 
 
@@ -215,7 +214,7 @@ Demostrar que un objeto cifrado con SSE-KMS no es accesible públicamente, inclu
 
 
 
-!\[Error Invalid Argument - Requiere Signature Version 4](imagenes/tarea3-error-signature-required.png)
+![Error Invalid Argument - Requiere Signature Version 4](imagenes/tarea3-error-signature-required.png)
 
 
 
@@ -285,7 +284,7 @@ Al abrir la imagen, la consola generó automáticamente una \*\*URL prefirmada\*
 
 
 
-!\[URL firmada generada automáticamente por la consola S3](imagenes/tarea4-url-firmada.png)
+![URL firmada generada automáticamente por la consola S3](imagenes/tarea4-url-firmada.png)
 
 
 
@@ -345,7 +344,7 @@ Demostrar cómo CloudTrail registra todas las operaciones relacionadas con nuest
 
 
 
-!\[Historial de eventos filtrado por KMS](imagenes/tarea5-cloudtrail-filtro-kms.png)
+![Historial de eventos filtrado por KMS](imagenes/tarea5-cloudtrail-lista-eventos.png)
 
 
 
@@ -373,7 +372,7 @@ Seleccionamos el evento \*\*GenerateDataKey\*\* y observamos:
 
 
 
-!\[Detalle del evento GenerateDataKey](imagenes/tarea5-evento-generatedatakey.png)
+![Detalle del evento GenerateDataKey](imagenes/tarea5-evento-generatedatakey2.png)
 
 
 
@@ -411,7 +410,7 @@ Seleccionamos el evento \*\*Decrypt\*\* y observamos:
 
 
 
-!\[Detalle del evento Decrypt](imagenes/tarea5-evento-decrypt.png)
+![Detalle del evento Decrypt](imagenes/tarea5-evento-decrypt.png)
 
 
 
@@ -483,7 +482,7 @@ Cifrar el volumen raíz de una instancia EC2 existente que inicialmente no tení
 
 
 
-!\[Volumen inicial sin cifrar](imagenes/tarea6-volumen-inicial-sin-cifrar.png)
+![Volumen inicial sin cifrar](imagenes/tarea6-instancia-detenida.png)
 
 
 
@@ -497,7 +496,7 @@ Cifrar el volumen raíz de una instancia EC2 existente que inicialmente no tení
 
 
 
-!\[Instancia detenida](imagenes/tarea6-instancia-detenida.png)
+![Instancia detenida](imagenes/tarea6-instancia-detenida.png)
 
 
 
@@ -517,7 +516,7 @@ Cifrar el volumen raíz de una instancia EC2 existente que inicialmente no tení
 
 
 
-!\[Instantánea del volumen sin cifrar](imagenes/tarea6-instantanea-creada.png)
+![Instantánea del volumen sin cifrar](imagenes/tarea6-instantanea-creada.png)
 
 
 
@@ -539,7 +538,7 @@ Cifrar el volumen raíz de una instancia EC2 existente que inicialmente no tení
 
 
 
-!\[Creación de volumen cifrado con KMS](imagenes/tarea6-crear-volumen-cifrado.png)
+![Creación de volumen cifrado con KMS](imagenes/tarea6-crear-volumen-cifrado.png)
 
 
 
@@ -553,7 +552,7 @@ Para identificar claramente los volúmenes, los renombramos:
 
 
 
-!\[Volúmenes renombrados](imagenes/tarea6-volumenes-dual.png)
+![Volúmenes renombrados](imagenes/tarea6-volumenes-dual.png)
 
 
 
@@ -569,7 +568,7 @@ Para identificar claramente los volúmenes, los renombramos:
 
 
 
-!\[Volumen antiguo desasociado](imagenes/tarea6-volumen-desasociado.png)
+![Volumen antiguo desasociado](imagenes/tarea6-volumen-desasociado.png)
 
 
 
@@ -589,7 +588,7 @@ Para identificar claramente los volúmenes, los renombramos:
 
 
 
-!\[Nuevo volumen cifrado asociado](imagenes/tarea6-volumen-cifrado-asociado.png)
+![Nuevo volumen cifrado asociado](imagenes/tarea6-volumen-cifrado-asociado.png)
 
 
 
@@ -801,6 +800,7 @@ Este laboratorio evidencia la importancia de:
 \- \*\*Planificar la recuperación\*\* ante deshabilitación accidental
 
 \- \*\*Aplicar defensa en profundidad\*\* en AWS
+
 
 
 
