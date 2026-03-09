@@ -201,12 +201,29 @@ Demostrar que un objeto cifrado con SSE-KMS no es accesible públicamente, inclu
 3. Confirmamos los cambios
 
 
+![Bloqueo de acceso público desactivado](imagenes/tarea3-permiso-acceso-publico.png)
 
-![Bloqueo de acceso público desactivado](imagenes/tarea3-bloqueo-desactivado.png)
+#### 3.3 Modificación de permisos del objeto
+
+1. Seleccionamos en el enlace del bucket que contiene imagebucket , la pestaña **permiso**
+
+2. En Propiedad del objeto, Seleccionamos **ACL habilitadas**
+
+3. Seleccionamos la casilla de verificación para la confirmación. Mantenemos seleccionada la opción **Propietario del bucket preferido** y **Guardar cambios.**
+
+4. Seleccionamos la pestaña **Objetos** y, luego,  **clock.png.**
+
+5. Acciones > **Hacer público a través de ACL.**
+
+6.**Hacer público.**
+
+Se muestra un anuncio para indicar que la configuración de acceso público se editó de forma correcta.
+
+### evidencia
+![configuración de acceso para el objeto](imagenestarea3-acceso-publico-objeto-correcto.png)
 
 
-
-#### 3.3 Segundo intento: Acceso público (bucket público, objeto público)
+#### 3.4 Segundo intento: Acceso público (bucket público, objeto público)
 
 1. Volvemos a cargar la misma URL del objeto
 
@@ -214,7 +231,7 @@ Demostrar que un objeto cifrado con SSE-KMS no es accesible públicamente, inclu
 
 
 
-![Error Invalid Argument - Requiere Signature Version 4](imagenes/tarea3-error-signature-required.png)
+![Error Invalid Argument - Requiere Signature Version 4](imagenes/tarea3-error-invalid-Argument.png)
 
 
 
@@ -358,7 +375,7 @@ Este evento se generó cuando **subimos** `clock.png` a S3 con cifrado SSE-KMS.
 
 
 
-![Detalle del evento GenerateDataKey](imagenes/tarea5-evento-generatedatakey2.png)
+![Detalle del evento GenerateDataKey](imagenes/tarea5-evento-GenerateDataKey.png)
 
 
 
@@ -390,7 +407,7 @@ Seleccionamos el evento **Decrypt** y observamos:
 
 
 
-![Detalle del evento Decrypt](imagenes/tarea5-evento-decrypt.png)
+![Detalle del evento Decrypt](imagenes/tarea5-evento-descryp.png)
 
 
 
@@ -462,7 +479,7 @@ Cifrar el volumen raíz de una instancia EC2 existente que inicialmente no tení
 
 
 
-![Volumen inicial sin cifrar](imagenes/tarea6-volumen-inicial-sin-cifrar.png)
+![Volumen inicial sin cifrar](imagenes/tarea6-volumen-raiz-no-cifrado.png)
 
 
 
@@ -496,7 +513,7 @@ Cifrar el volumen raíz de una instancia EC2 existente que inicialmente no tení
 
 
 
-![Instantánea del volumen sin cifrar](imagenes/tarea6-instantanea-creada.png)
+![Instantánea del volumen sin cifrar](imagenes/tarea6-creación-instantanea-volumen-original.png)
 
 
 
@@ -508,17 +525,17 @@ Cifrar el volumen raíz de una instancia EC2 existente que inicialmente no tení
 
 3. Configuramos:
 
-&nbsp;  - **Zona de disponibilidad:** `us-east-4c` (misma que la instancia)
+&nbsp;  - **Zona de disponibilidad:** `us-east-1f` (misma que la instancia)
 
 &nbsp;  - ✅ **Cifrar este volumen**
 
-&nbsp;  - **Clave KMS:** `MyKMSKey`
+&nbsp;  - **Clave KMS:** `MyKMSKey1`
 
 4. Creamos el volumen
 
 
 
-![Creación de volumen cifrado con KMS](imagenes/tarea6-crear-volumen-zona-correcta.png)
+![Creación de volumen cifrado con KMS](imagenes/tarea6-volumen-cifrado-desde-la-instantánea.png)
 
 
 
@@ -532,7 +549,7 @@ Para identificar claramente los volúmenes, los renombramos:
 
 
 
-![Volúmenes renombrados](imagenes/tarea6-volumenes-dual.png)
+![Volúmenes renombrados](imagenes/tarea6-volumenes-renombrados.png)
 
 
 
@@ -548,7 +565,7 @@ Para identificar claramente los volúmenes, los renombramos:
 
 
 
-![Volumen antiguo desasociado](imagenes/tarea6-volumen-desasociado.png)
+![Volumen antiguo desasociado](imagenes/tarea6-volumenold-desconectado.png)
 
 
 
@@ -568,7 +585,7 @@ Para identificar claramente los volúmenes, los renombramos:
 
 
 
-![Nuevo volumen cifrado asociado](imagenes/tarea6-volumen-cifrado-asociado.png)
+![Nuevo volumen cifrado asociado](imagenes/tarea6-volumenNew-asociado.png)
 
 
 
@@ -625,7 +642,7 @@ Demostrar el impacto de deshabilitar una clave KMS en el acceso a recursos cifra
 
 
 
-![Clave KMS deshabilitada](imagenes/tarea7-clave-deshabilitada.png)
+![Clave KMS deshabilitada](imagenes/tarea7-clave-kms-desactivada.png)
 
 
 
@@ -657,7 +674,7 @@ El volumen raíz está cifrado con MyKMSKey. Al iniciar, EC2 necesita que KMS de
 
 
 
-![Error KMS.DisabledException en S3](imagenes/tarea7-error-s3-kms-disabled.png)
+![Error KMS.DisabledException en S3](imagenes/tarea7-error-KMS-DisabledException.png)
 
 
 
@@ -679,6 +696,8 @@ Revisamos el historial de eventos y encontramos:
 
 
 ![Evento DisableKey en CloudTrail](imagenes/tarea7-cloudtrail-disablekey.png)
+![Evento StartInstances en CloudTrail](imagenes/tarea7-evento-StartInstances.png)
+![EventoCreateGrant en CloudTrail](imagenes/tarea7-evento- CreateGrant.png)
 
 
 
@@ -698,7 +717,7 @@ El evento **CreateGrant** muestra el error: la clave está deshabilitada, por lo
 
 
 
-![Clave rehabilitada e instancia funcionando](imagenes/tarea7-clave-rehabilitada-instancia-running.png)
+![Clave rehabilitada e instancia funcionando](imagenes/tarea7-clave-rehabilitada-instancia.png)
 
 
 
@@ -763,6 +782,7 @@ Este laboratorio evidencia la importancia de:
 - **Planificar la recuperación** ante deshabilitación accidental
 
 -**Aplicar defensa en profundidad** en AWS
+
 
 
 
