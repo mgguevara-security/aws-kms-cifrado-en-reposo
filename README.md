@@ -676,11 +676,8 @@ Revisamos el historial de eventos y encontramos:
 | Evento | Hallazgo |
 
 |--------|----------|
-
 | **DisableKey** | Registro de cuándo deshabilitamos la clave |
-
 | **StartInstances** | Solicitud exitosa, pero instancia no arranca |
-
 | **CreateGrant** | Error por clave deshabilitada |
 
 
@@ -770,6 +767,7 @@ Este laboratorio evidencia la importancia de:
 - **Planificar la recuperación** ante deshabilitación accidental
 
 -**Aplicar defensa en profundidad** en AWS
+
 
 
 
