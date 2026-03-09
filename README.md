@@ -508,7 +508,7 @@ Cifrar el volumen raíz de una instancia EC2 existente que inicialmente no tení
 
 3. Configuramos:
 
-&nbsp;  - **Zona de disponibilidad:** `us-east-1c` (misma que la instancia)
+&nbsp;  - **Zona de disponibilidad:** `us-east-4c` (misma que la instancia)
 
 &nbsp;  - ✅ **Cifrar este volumen**
 
@@ -770,6 +770,7 @@ Este laboratorio evidencia la importancia de:
 - **Planificar la recuperación** ante deshabilitación accidental
 
 -**Aplicar defensa en profundidad** en AWS
+
 
 
 
