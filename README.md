@@ -51,7 +51,7 @@ Crear una clave simétrica administrada por el cliente en AWS KMS que usaremos p
 
 4. Seleccionamos **Simétrica** como tipo de clave
 
-5. Asignamos el alias **MyKMSKey**
+5. Asignamos el alias **MyKMSKey1**
 
 6. Designamos al rol **voclabs** como administrador de la clave
 
@@ -67,9 +67,9 @@ Se creó una clave simétrica de 256 bits con las siguientes características:
 
 - **Tipo:** Clave administrada por el cliente (Customer Managed Key)
 
-- **Alias:** MyKMSKey
+- **Alias:** MyKMSKey1
 
-- **ID de clave:** 1aa42398-190f-48f2-be6b-0fe50b15a746
+- **ID de clave:** e6d5a255-efcc-498f-a961-2c23d3b14fb8
 
 - **Administradores:** rol voclabs (usuario actual del laboratorio)
 
@@ -137,7 +137,7 @@ El archivo se almacenó utilizando **SSE-KMS (Server-Side Encryption with KMS)**
 
 - La clave de datos se cifró nuevamente con `MyKMSKey` y se almacenó como metadatos del objeto
 
-- Sin acceso a `MyKMSKey`, es imposible descifrar la clave de datos y, por lo tanto, al archivo.
+- Sin acceso a `MyKMSKey1`, es imposible descifrar la clave de datos y, por lo tanto, al archivo.
 
 
 
@@ -367,7 +367,7 @@ Este evento se generó cuando **subimos** `clock.png` a S3 con cifrado SSE-KMS.
 | Campo | Valor encontrado | Significado |
 | :--- | :--- | :--- |
 | `eventName` | GenerateDataKey | KMS generó una nueva clave de datos |
-| `keyId` | arn:aws:kms:us-east-1:830231096724:key/1aa42398... | Nuestra clave `MyKMSKey` |
+| `keyId` | arn:aws:kms:us-east-1:830231096724:key/ e6d5a255-efcc-498f-a961-2c23d3b14fb8| Nuestra clave `MyKMSKey` |
 | `principalId` | voclabs | Quién lo solicitó (nosotros) |
 | `resources[].ARN` | arn:aws:s3:::.../clock.png | El objeto que se cifraría |
 
@@ -399,7 +399,7 @@ Seleccionamos el evento **Decrypt** y observamos:
 | Campo | Valor encontrado | Significado |
 |-------|------------------|-------------|
 | `eventName` | Decrypt | Se descifró algo usando nuestra clave |
-| `keyId` | arn:aws:kms:us-east-1:830231096724:key/1aa42398-190f-48f2-be6b-0fe50b15a746 | Misma clave |
+| `keyId` | arn:aws:kms:us-east-1:830231096724:key/e6d5a255-efcc-498f-a961-2c23d3b14fb8 | Misma clave |
 | `principalId` | voclabs | Mismo usuario |
 | `resources\[].ARN` | arn:aws:s3:::.../clock.png | El objeto que se descifró |
 
@@ -607,7 +607,7 @@ Una vez asociado, verificamos que:
 graph TD
     A[Instancia con volumen sin cifrar] --> B[Detener instancia]
     B --> C[Crear instantánea del volumen]
-    C --> D[Crear volumen CIFRADO desde instantánea<br/>con MyKMSKey]
+    C --> D[Crear volumen CIFRADO desde instantánea<br/>con MyKMSKey1]
     D --> E[Desasociar volumen antiguo]
     E --> F[Asociar volumen cifrado como /dev/xvda]
     F --> G[Instancia con volumen raíz cifrado]
@@ -780,6 +780,7 @@ Este laboratorio evidencia la importancia de:
 - **Planificar la recuperación** ante deshabilitación accidental
 
 -**Aplicar defensa en profundidad** en AWS
+
 
 
 
