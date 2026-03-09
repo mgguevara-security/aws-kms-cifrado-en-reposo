@@ -333,7 +333,7 @@ Demostrar cómo CloudTrail registra todas las operaciones relacionadas con nuest
 
 2. Seleccionamos **Event history** (Historial de eventos)
 
-3. Aplicamos filtro por **"Event source"** = `kms.amazonaws.com`
+3. Aplicamos filtro por **origen de eventos** = `kms.amazonaws.com`
 
 
 
@@ -770,6 +770,7 @@ Este laboratorio evidencia la importancia de:
 - **Planificar la recuperación** ante deshabilitación accidental
 
 -**Aplicar defensa en profundidad** en AWS
+
 
 
 
