@@ -428,7 +428,7 @@ Seleccionamos el evento **Decrypt** y observamos:
 
 
 
-✅ **Valor para seguridad/auditoría:\\
+✅ **Valor para seguridad/auditoría:**
 
 - Podemos rastrear **CADA VEZ** que se usó nuestra clave
 
@@ -701,7 +701,7 @@ Revisamos el historial de eventos y encontramos:
 
 | **StartInstances** | Solicitud exitosa, pero instancia no arranca |
 
-| **CreateGrant\** | Error por clave deshabilitada |
+| **CreateGrant** | Error por clave deshabilitada |
 
 
 
@@ -790,6 +790,7 @@ Este laboratorio evidencia la importancia de:
 - **Planificar la recuperación** ante deshabilitación accidental
 
 -**Aplicar defensa en profundidad** en AWS
+
 
 
 
