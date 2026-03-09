@@ -331,7 +331,7 @@ Demostrar cómo CloudTrail registra todas las operaciones relacionadas con nuest
 
 1. Navegamos a la consola de **CloudTrail**
 
-2. Seleccionamos **"Event history"** (Historial de eventos)
+2. Seleccionamos **Event history** (Historial de eventos)
 
 3. Aplicamos filtro por **"Event source"** = `kms.amazonaws.com`
 
@@ -347,21 +347,14 @@ Este evento se generó cuando **subimos** `clock.png` a S3 con cifrado SSE-KMS.
 
 
 
-Seleccionamos el evento **GenerateDataKey** y observamos:
-
-
+### Evento: GenerateDataKey
 
 | Campo | Valor encontrado | Significado |
-
-|-------|------------------|-------------|
-
+| :--- | :--- | :--- |
 | `eventName` | GenerateDataKey | KMS generó una nueva clave de datos |
-
-| `keyId` | arn:aws:kms:us-east-1:830231096724:key/1aa42398-190f-48f2-be6b-0fe50b15a746 | Nuestra clave `MyKMSKey` |
-
+| `keyId` | arn:aws:kms:us-east-1:830231096724:key/1aa42398... | Nuestra clave `MyKMSKey` |
 | `principalId` | voclabs | Quién lo solicitó (nosotros) |
-
-| `resources\[].ARN` | arn:aws:s3:::.../clock.png | El objeto que se cifraría |
+| `resources[].ARN` | arn:aws:s3:::.../clock.png | El objeto que se cifraría |
 
 
 
@@ -388,17 +381,11 @@ Este evento se generó cuando **abrimos** `clock.png` desde la consola de S3.
 Seleccionamos el evento **Decrypt** y observamos:
 
 
-
 | Campo | Valor encontrado | Significado |
-
 |-------|------------------|-------------|
-
 | `eventName` | Decrypt | Se descifró algo usando nuestra clave |
-
 | `keyId` | arn:aws:kms:us-east-1:830231096724:key/1aa42398-190f-48f2-be6b-0fe50b15a746 | Misma clave |
-
 | `principalId` | voclabs | Mismo usuario |
-
 | `resources\[].ARN` | arn:aws:s3:::.../clock.png | El objeto que se descifró |
 
 
@@ -783,6 +770,7 @@ Este laboratorio evidencia la importancia de:
 - **Planificar la recuperación** ante deshabilitación accidental
 
 -**Aplicar defensa en profundidad** en AWS
+
 
 
 
