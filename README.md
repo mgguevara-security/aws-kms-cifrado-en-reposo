@@ -188,7 +188,7 @@ Demostrar que un objeto cifrado con SSE-KMS no es accesible públicamente, inclu
 
 
 
-!\[Error Access Denied - Bucket privado](imagenes/tarea3-error-access-denied.png)
+![Error Access Denied - Bucket privado](imagenes/tarea3-error-access-denied.png)
 
 
 
@@ -482,7 +482,7 @@ Cifrar el volumen raíz de una instancia EC2 existente que inicialmente no tení
 
 
 
-![Volumen inicial sin cifrar](imagenes/tarea6-instancia-detenida.png)
+![Volumen inicial sin cifrar](imagenes/tarea6-volumen-inicial-sin-cifrar.png)
 
 
 
@@ -655,7 +655,7 @@ Demostrar el impacto de deshabilitar una clave KMS en el acceso a recursos cifra
 
 
 
-!\[Clave KMS deshabilitada](imagenes/tarea7-clave-deshabilitada.png)
+![Clave KMS deshabilitada](imagenes/tarea7-clave-deshabilitada.png)
 
 
 
@@ -669,7 +669,7 @@ Demostrar el impacto de deshabilitar una clave KMS en el acceso a recursos cifra
 
 
 
-!\[Instancia no puede iniciarse](imagenes/tarea7-instancia-no-inicia.png)
+![Instancia no puede iniciarse](imagenes/tarea7-instancia-no-inicia.png)
 
 
 
@@ -687,7 +687,7 @@ El volumen raíz está cifrado con MyKMSKey. Al iniciar, EC2 necesita que KMS de
 
 
 
-!\[Error KMS.DisabledException en S3](imagenes/tarea7-error-s3-kms-disabled.png)
+![Error KMS.DisabledException en S3](imagenes/tarea7-error-s3-kms-disabled.png)
 
 
 
@@ -715,7 +715,7 @@ Revisamos el historial de eventos y encontramos:
 
 
 
-!\[Evento DisableKey en CloudTrail](imagenes/tarea7-cloudtrail-disablekey.png)
+![Evento DisableKey en CloudTrail](imagenes/tarea7-cloudtrail-disablekey.png)
 
 
 
@@ -735,7 +735,7 @@ El evento \*\*CreateGrant\*\* muestra el error: la clave está deshabilitada, po
 
 
 
-!\[Clave rehabilitada e instancia funcionando](imagenes/tarea7-clave-rehabilitada-instancia-running.png)
+![Clave rehabilitada e instancia funcionando](imagenes/tarea7-clave-rehabilitada-instancia-running.png)
 
 
 
@@ -800,6 +800,7 @@ Este laboratorio evidencia la importancia de:
 \- \*\*Planificar la recuperación\*\* ante deshabilitación accidental
 
 \- \*\*Aplicar defensa en profundidad\*\* en AWS
+
 
 
 
