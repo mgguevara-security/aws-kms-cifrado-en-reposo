@@ -4,7 +4,7 @@
 
 **Autor:** Marcos Gastón Guevara  
 
-**Fecha:** 08/03/2026  
+**Fecha:** 09/03/2026  
 
 **Laboratorio:** AWS Academy - Cifrado con KMS
 
@@ -780,6 +780,7 @@ Este laboratorio evidencia la importancia de:
 - **Planificar la recuperación** ante deshabilitación accidental
 
 -**Aplicar defensa en profundidad** en AWS
+
 
 
 
