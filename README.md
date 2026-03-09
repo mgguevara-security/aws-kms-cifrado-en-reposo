@@ -15,7 +15,6 @@
 En este laboratorio se demuestra:
 
 
-
 - Crear y gestionar claves de cifrado en AWS KMS
 
 - Usar esas claves para cifrar datos en S3 (archivos)
@@ -454,9 +453,9 @@ Si detectamos un acceso no autorizado a datos, podemos revisar CloudTrail para v
 
 - ¿A qué hora?
 
-
-
 Esto es **fundamental para cumplimiento normativo** (GDPR, HIPAA, SOX) y para **investigaciones de seguridad**.
+
+
 
 ## 💾 TAREA 6: CIFRADO DEL VOLUMEN RAÍZ DE UNA INSTANCIA EC2
 
@@ -510,9 +509,9 @@ Cifrar el volumen raíz de una instancia EC2 existente que inicialmente no tení
 
 2. Acciones → **Crear instantánea**
 
-3\. Agregamos etiqueta: **Name** = `Unencrypted Root Volume`
+3. Agregamos etiqueta: **Name** = `Unencrypted Root Volume`
 
-4\. Esperamos a que el estado sea **Completado**
+4. Esperamos a que el estado sea **Completado**
 
 
 
@@ -616,7 +615,7 @@ graph TD
     D --> E[Desasociar volumen antiguo]
     E --> F[Asociar volumen cifrado como /dev/xvda]
     F --> G[Instancia con volumen raíz cifrado]
-    
+
     style D fill:#90EE90,stroke:#333,stroke-width:2px
     style G fill:#90EE90,stroke:#333,stroke-width:2px
 ```
@@ -790,6 +789,7 @@ Este laboratorio evidencia la importancia de:
 - **Planificar la recuperación** ante deshabilitación accidental
 
 -**Aplicar defensa en profundidad** en AWS
+
 
 
 
