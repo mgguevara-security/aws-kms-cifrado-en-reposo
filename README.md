@@ -262,10 +262,6 @@ Demostrar que un usuario autenticado puede acceder al objeto cifrado, ya que la 
 
 
 
-*(No se incluye captura de la imagen por simplicidad, pero se confirmó visualmente su correcta visualización)*
-
-
-
 #### 4.2 Análisis de la URL generada
 
 Al abrir la imagen, la consola generó automáticamente una **URL prefirmada** que incluye:
@@ -314,7 +310,7 @@ Cuando solicitamos abrir el objeto desde la consola:
 
 ### Conclusión
 
-El cifrado con KMS **no impide el acceso a usuarios autorizados\*\*, pero bloquea eficazmente el acceso anónimo o no autenticado, incluso si el objeto se hace público accidentalmente.
+El cifrado con KMS **no impide el acceso a usuarios autorizados**, pero bloquea eficazmente el acceso anónimo o no autenticado, incluso si el objeto se hace público accidentalmente.
 
 
 ## 📊 TAREA 5: SUPERVISIÓN CON AWS CLOUDTRAIL
@@ -787,6 +783,7 @@ Este laboratorio evidencia la importancia de:
 - **Planificar la recuperación** ante deshabilitación accidental
 
 -**Aplicar defensa en profundidad** en AWS
+
 
 
 
