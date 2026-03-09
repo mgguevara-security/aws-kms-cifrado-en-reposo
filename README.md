@@ -218,19 +218,14 @@ Demostrar que un objeto cifrado con SSE-KMS no es accesible públicamente, inclu
 
 
 
-### Análisis técnico
+## Análisis técnico
 
 Este comportamiento demuestra un principio fundamental de seguridad:
 
-
-
 | Condición | Resultado | Explicación |
-
-|-----------|-----------|-------------|
-
-| Bucket privado, objeto privado | ❌ Access Denied | El bucket bloquea todo acceso anónimo |
-
-| Bucket público, objeto público | ❌ Invalid Argument | El objeto está cifrado con SSE-KMS, requiere autenticación firmada (Signature Version 4) |
+| :--- | :--- | :--- |
+| Bucket privado, objeto privado | ❌ **Access Denied** | El bucket bloquea todo acceso anónimo |
+| Bucket público, objeto público | ❌ **Invalid Argument** | El objeto está cifrado con SSE-KMS, requiere autenticación firmada (Signature Version 4) |
 
 
 
@@ -792,6 +787,7 @@ Este laboratorio evidencia la importancia de:
 - **Planificar la recuperación** ante deshabilitación accidental
 
 -**Aplicar defensa en profundidad** en AWS
+
 
 
 
